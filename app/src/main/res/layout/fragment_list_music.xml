@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.ListMusicFragment">
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:textColor="#FF6B03"
+        android:textSize="22sp"
+        android:gravity="center"
+        android:text="All music"
+        android:layout_marginTop="45dp"
+        app:layout_constraintBottom_toTopOf="@id/rv"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/title"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_marginTop="15dp"
+        android:id="@+id/rv"
+        tools:listitem="@layout/item_music"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        android:overScrollMode="never"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
